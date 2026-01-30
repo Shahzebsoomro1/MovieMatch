@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMatch - Social Movie Recommendation Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .status { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .status.running { border-left: 4px solid #4caf50; }
+        .status.building { border-left: 4px solid #ff9800; }
+        h1 { color: #333; margin: 20px 0; }
+        .info { color: #666; margin: 10px 0; }
+        .success { color: #4caf50; font-weight: bold; }
+        .warning { color: #ff9800; font-weight: bold; }
+        .code { background: #f0f0f0; padding: 10px; border-radius: 4px; font-family: monospace; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 MovieMatch - Project Starting</h1>
+        
+        <div class="status running">
+            <h2>Backend Server Status</h2>
+            <p class="info">
+                <span class="success">✓ RUNNING</span><br>
+                URL: <span class="code">http://localhost:5000</span><br>
+                Port: 5000<br>
+                MongoDB: Connected<br>
+                Database: moviematch
+            </p>
+        </div>
+
+        <div class="status building">
+            <h2>Frontend Setup</h2>
+            <p class="info">
+                <span class="warning">⚙ INITIALIZING</span><br>
+                Port: 5173<br>
+                Building with Vite...
+            </p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h2>API Base URL</h2>
+            <p class="code">http://localhost:5000/api</p>
+            <p style="color: #666; margin-top: 10px;">All API endpoints available. Ready for integration.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h2>Available Endpoints</h2>
+            <ul style="margin-left: 20px; color: #666;">
+                <li>Auth: /api/auth/register, /api/auth/login</li>
+                <li>Users: /api/users/*, /api/users/:id/*</li>
+                <li>Movies: /api/movies/search, /api/movies/trending</li>
+                <li>Groups: /api/groups/*, /api/groups/:id/*</li>
+                <li>Posts: /api/posts/*, /api/posts/:id/*</li>
+                <li>Recommendations: /api/recommendations/*</li>
+                <li>Notifications: /api/notifications/*</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        console.log('MovieMatch Backend: http://localhost:5000');
+        console.log('API Base: http://localhost:5000/api');
+        console.log('Socket.io: http://localhost:5000');
+        
+        // Redirect to frontend when ready
+        setTimeout(() => {
+            if (window.location.port !== '5000') {
+                window.location.href = 'http://localhost:5173';
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

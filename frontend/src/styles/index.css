@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Set a visible background color immediately */
+    @apply bg-[#0b0e11] text-white antialiased;
+    background-image: radial-gradient(at 50% 0%, rgba(255, 107, 107, 0.15) 0, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#4ecdc4] font-black;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl transition-all duration-500;
+  }
+
+  .glass-nav {
+    @apply fixed top-4 inset-x-4 max-w-7xl mx-auto z-50 backdrop-blur-xl bg-black/40 border border-white/10 rounded-2xl;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+  }
+}
