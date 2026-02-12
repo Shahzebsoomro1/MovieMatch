@@ -24,13 +24,12 @@ A full-featured MERN stack application for discovering, sharing, and discussing 
 - Trending Movies
 - User Statistics Dashboard
 
-### Nice-to-Have Features (Phase 3)
+### Features pending (Phase 3)
 - Direct Messaging
 - Movie Watch Parties
 - Achievement Badges
 - Email Notifications
 - Dark Mode
-- Mobile App (React Native)
 
 ## Tech Stack
 
@@ -202,9 +201,6 @@ The frontend will be available at `http://localhost:5173`
 - `PUT /api/notifications/read-all` - Mark all as read
 - `DELETE /api/notifications/:id` - Delete notification
 
-## Database Collections
-
-See [Database Design section in guide](./docs/DATABASE.md) for detailed schema information.
 
 ## Real-time Features (Socket.io)
 
@@ -238,27 +234,9 @@ VITE_API_URL=http://localhost:5000/api
 VITE_SOCKET_URL=http://localhost:5000
 ```
 
-## Contributing
 
-1. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-2. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-3. Push to the branch (`git push origin feature/AmazingFeature`)
-4. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Authors
-
-Your Name & Development Team
-
-## Support
-
-For support, email support@moviematch.com or open an issue on GitHub.
 
 ## Acknowledgments
-
 - TMDb API for movie data
 - Cloudinary for image hosting
 - Socket.io for real-time features
